@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge"> 
+<meta name="viewport" content="width=device-width, initial-scale=1"> 
+<title>html5 canvas首屏自适应背景动画循环效果代码</title>
+
+<link rel="stylesheet" type="text/css" href="css/normalize.css" />
+<link rel="stylesheet" type="text/css" href="css/demo.css" />
+
+<!--必要样式-->
+<link rel="stylesheet" type="text/css" href="css/component.css" />
+
+<style>
+	body{font-size: 12px;font-family:"微软雅黑";}
+	
+	/*<!--登录栏 start-->*/
+	#loginBox{padding:10px 20px;position:absolute;top:25%;left:50%;margin-left:-150px;background:rgba(32, 33, 32, 0.4);text-align:center;border-radius:20px;}
+	#logo{margin-bottom:20px;}
+	/*<!--loginForm start-->*/
+	#form{width:300px;margin:0 auto;}
+	#form p{margin-bottom:30px;width:100%;position:relative;height:35px;line-height:35px;}
+	#form p.mb10{margin-bottom:10px;}
+	#form p.mb0{margin-bottom:0px;}
+	#form p input{width:100%;height:100%;background:rgba(59, 129, 136, 0.59);border:none;outline:none;text-indent:2.5em;font-size:16px;font-weight:600;border-radius:5px;}
+	#form p #login{text-align:center;text-indent:0em;height:40px;cursor:pointer;background-color:#3499DA;color:#fff;transition: all 1s;border-radius:5px;}
+	#form p #login:hover{background-color:#688ac2;transition: color 1s;}
+	#form p .left{position:absolute;left:2px;font-size:30px;color:rgba(152, 151, 151, 0.59);vertical-align:middle;}
+	#form p #vfy{width:50%;float:left;}
+	#form p span a{cursor:pointer;color:#fefefe;font-size:16px;text-decoration:none;}
+	#form p span:hover a{color:#3499DA;}
+	#form p .regist{float:left;}
+	#form p .pwd{float:right;}
+	/*<!--loginForm end-->*/
+	.icon{position:absolute;right:4px;top:2px;display:none;color:rgba(152, 151, 151, 0.59);font-size:20px;cursor:pointer;}
+	.icon-correct{color:green;}
+	.icon-error{color:red;}
+	/*<!--登录栏 end-->*/
+</style>
+
+<!--[if IE]>
+<script src="js/html5.js"></script>
+<![endif]-->
+</head>
+<body>
+		<div class="container demo-1">
+			<div class="content">
+				<div id="large-header" class="large-header">
+					<canvas id="demo-canvas"></canvas>
+					<!--登录栏 start-->
+					<div id="loginBox" class="animated bounceInDown">
+							
+						<!--logo start-->
+						<div id="logo">
+							<h1 style="color:#fff;font-size:40px;font-weight:600;">login</h1>
+						</div>
+						<!--logo end-->
+							
+						<!--loginForm start-->
+						<div id="form">
+							<p class="animated bounceInLeft">
+								<i class="iconfont icon-zhanghao left" id="icon_user"></i>
+								<input type="text" placeholder="请输入用户名" class="input" maxlength="30" id="user" autofocus="autofocus">
+								<i class="iconfont icon"></i>
+							</p>
+							
+							<p class="animated bounceInRight">
+								<i class="iconfont icon-vpnkey left" id="icon_pwd"></i>
+								<input type="password" placeholder="请输入密码" class="input" maxlength="20" id="pwd">
+								<i class="iconfont icon"></i>
+							</p>
+							
+							<!--<p class="animated bounceInLeft">
+								<i class="iconfont icon-verify left" id="icon_vfy"></i>
+								<input type="text" placeholder="请输入验证码" class="input" maxlength="5" id="vfy">
+								<i class="iconfont icon"></i>
+							</p>-->
+							
+							<p class="animated bounceIn mb10">
+								<input id="login" type="button" value="登录" onclick="user.getlogin(this);">
+							</p>
+							
+							<p class="animated rotateInUpRight mb0">
+								<span class="regist">
+									<a href="#">立即注册</a>
+								</span>
+								<span class="pwd">
+									<a href="#" target="_blank">忘记密码?</a>
+								</span>
+							</p>
+							
+						</div>
+						<!--loginForm end-->
+					</div>
+					<!--登录栏 end-->
+				</div>
+				
+			</div>
+		</div>
+		<script src="js/TweenLite.min.js"></script>
+		<script src="js/EasePack.min.js"></script>
+		<script src="js/rAF.js"></script>
+		<script src="js/demo-1.js"></script>
+	</body>
+</html>

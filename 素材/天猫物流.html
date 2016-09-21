@@ -1,0 +1,212 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="Generator" content="EditPlus®">
+		<meta name="Author" content="king">
+		<meta name="Keywords" content="">
+		<meta name="Description" content="">
+		<title>Document</title>
+	</head>
+	<style type="text/css">
+		*{padding:0;margin:0;}
+		body{family:"微软雅黑";font-size:12px;}
+		a{text-decoration:none;}
+		ul,ol li{list-style:none;} 
+		/*  */
+		.panel-package {
+			width:100%;
+			background-color: #f3f3f3;
+			margin-bottom: 32px;
+			position: relative;
+			border-radius: 3px;
+		}
+		.panel-package .package-title {
+			margin: 0;
+			padding: 14px 0 14px 20px;
+			position: relative;
+		}
+		.panel-package .package-title {
+			margin: 0 14px 0 25px;
+			padding: 14px 0 14px 12px;
+			font-size: 18px;
+			border-bottom: 1px solid #e7e7e7;
+			font-family: "Hiragino Sans GB","Microsoft YaHei";
+		}
+		.complain-box {
+			position: absolute;
+			right: 10px;
+			top: 15px;
+		}
+		.title-text {
+			font-weight: 400;
+			font-family: "Microsoft Yahei";
+			font-size: 16px;
+		}
+		.title-en {
+			font-size: 12px;
+			color: #999;
+			line-height: 1em;
+		}
+		.package-status {
+			padding: 18px 0 0 0;
+		}
+		.package-status .status-box {
+			position: relative;
+		}
+		.package-status .status-box {
+			overflow: hidden;
+		}
+		.package-status .status-box:before {
+			content: " ";
+			background-color: #f3f3f3;
+			display: block;
+			position: absolute;
+			top: -2px;
+			left: 20px;
+			width: 10px;
+			height: 4px;
+		}
+		.package-status .status-list {
+			margin-top: 0;
+		}
+		.package-status .status-list {
+			margin-top: -8px;
+		}
+		.package-status .status-list {
+			margin: 0;
+			padding: 0;
+			margin-left: 12px;
+			
+			padding-left: 28px;
+			list-style: none;
+			font-size: 12px;
+		}
+		.order-detail ul {
+			list-style: none;
+			padding: 0;
+		}
+		
+		.package-status .status-list li {
+			margin-bottom: -2px;
+		}
+		.package-status .status-list li {
+			height: auto;
+			min-height: 30px;
+		}
+		.package-status .status-list li {
+			height: 30px;
+			border-left: 1px solid #d9d9d9;
+		}
+		.package-status .status-list li:before {
+			content: '';
+			border: 3px solid #f3f3f3;
+			background-color: #d9d9d9;
+			display: inline-block;
+			width: 5px;
+			height: 5px;
+			border-radius: 5px;
+			margin-left: -6px;
+			margin-right: 10px;
+		}
+
+		.package-status .status-list .date {
+			width: 85px;
+		}
+		.package-status .status-list .date, .package-status .status-list .week, .package-status .status-list .time {
+			display: inline-block;
+		}
+		
+		.package-status .status-list .date {
+			font-weight: 700;
+			margin-right: 8px;
+			font-family: Arial;
+		}
+		.package-status .status-list .week {
+			width: 42px;
+		}
+		
+		
+		.package-status .status-list .week {
+			font-weight: 700;
+		}
+		
+		.package-status .status-list .time {
+			width: 48px;
+		}
+		.package-status .status-list .time {
+			margin-right: 28px;
+			margin-left: 5px;
+		}
+		.package-status .status-list .text {
+			width: 635px;
+		}
+		.package-status .status-list .text {
+			display: inline-block;
+			width: 653px;
+			vertical-align: text-top;
+			line-height: 1.3em;
+		}
+		
+		.package-status .status-list .latest {
+			/*border: none;*/
+		}
+		.package-status .status-list .latest:before {
+			background-color: #fe4300;
+			border-color: #f8e9e4;
+		}
+
+	</style>
+	<body>
+	  <div class="panel-package">
+		<!--<div class="arrow arrow-$circle.current"></div>-->
+		<!--<div class="tips"><i class="icon-delay"></i>由于台风影响将会派送延期很抱歉！</div> -->
+		<div class="package-title">	
+			<div class="complain-box"></div>						
+			<h3 class="title-text">您的包裹目前位于 重庆市，请耐心等待... </h3>
+			<div class="title-en"></div>
+		</div>
+					
+		<div class="package-status">
+			<div class="status-box" id="status_list">
+				<ul id="J_listtext2" class="status-list">
+					<li>
+						<span class="date">2016-09-18</span>
+						<span class="week">周日</span>
+						<span class="time">16:15:10</span>
+						<span class="text">包裹正在等待揽收</span>
+					</li>
+					<li>
+						<span class="date hidden">2016-09-18</span>
+						<span class="week hidden">周日</span>
+						<span class="time">18:50:33</span>
+						<span class="text">【重庆市】韵达快递 重庆合川区公司收件员 已揽件</span>
+					</li>
+					<li>
+						<span class="date hidden">2016-09-18</span>
+						<span class="week hidden">周日</span>
+						<span class="time">20:04:16</span>
+						<span class="text">【重庆市】重庆合川区公司 已发出</span>
+					</li>
+					<li>
+						<span class="date hidden">2016-09-18</span>
+						<span class="week hidden">周日</span>
+						<span class="time">23:39:24</span>
+						<span class="text">【重庆市】快件已到达 重庆转运中心</span>
+					</li>
+					<li class="latest">
+						<span class="date hidden">2016-09-18</span>
+						<span class="week hidden">周日</span>
+						<span class="time">23:40:45</span>
+						<span class="text">【重庆市】重庆转运中心 已发出</span>
+					</li>
+				</ul>
+			
+			<!-- <ul id="J_listtext1" style="display: none;" class="status-list"><li><span class="date">2016-09-18</span><span class="week">周日</span><span class="time">16:15:10</span><span class="text">卖家发货</span></li><li><span class="date hidden">2016-09-18</span><span class="week hidden">周日</span><span class="time">18:50:33</span><span class="text">在重庆合川区公司进行揽件扫描</span></li><li><span class="date hidden">2016-09-18</span><span class="week hidden">周日</span><span class="time">20:04:16</span><span class="text">在重庆合川区公司进行下级地点扫描，即将发往：广东广州分拨中心</span></li><li><span class="date hidden">2016-09-18</span><span class="week hidden">周日</span><span class="time">23:39:24</span><span class="text">在分拨中心重庆分拨中心进行称重扫描</span></li><li class="latest"><span class="date hidden">2016-09-18</span><span class="week hidden">周日</span><span class="time">23:40:45</span><span class="text">在重庆分拨中心进行装车扫描，即将发往：广东广州分拨中心</span></li></ul> -->
+			
+			</div>
+		</div>				
+	</div>
+
+	</body>
+</html>

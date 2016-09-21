@@ -1,0 +1,104 @@
+
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<title>橡皮擦图像擦除效果</title>
+	<style type="text/css">
+	* {
+		-webkit-touch-callout: none;
+		-webkit-text-size-adjust: none;
+		-webkit-tap-highlight-color: rgba(0,0,0,0);
+		-webkit-user-select: none;
+	}
+	body {
+		background: #FFF;
+		color: #000;
+		margin: 5px;
+		padding: 0px;
+		margin-bottom: 45px;
+		text-align: center;
+		font-family: Helvetica, Arial;
+	}
+	a {
+		color: #000;
+	}
+	a.box {
+		text-decoration: none;
+		display: inline-block;
+		color: #FFF;
+		background: #000;
+		padding: 10px;
+		margin: 10px 10px 10px 50px;
+	}
+	.big {
+		font-size: 2em;
+		display: inline-block;
+		margin: 10px;
+	}
+	.container {
+		position: relative;
+		display: inline-block;
+		width: 533px;
+		height: 380px;
+	}
+	#robot {
+		position: absolute;
+		top: 0px;
+		left: 0px;
+		z-index: 1;
+		-webkit-box-shadow: 0px 0px 20px 0px #707070;
+		-moz-box-shadow: 0px 0px 20px 0px #707070;
+		box-shadow: 0px 0px 20px 0px #707070;
+	}
+	#redux {
+		position: absolute;
+		top: 0px;
+		left: 0px;
+		z-index: 2;
+	}
+	</style>
+	<script type='text/javascript' src="./橡皮擦图像擦除效果_files/jquery.min.js"></script>
+	<script type='text/javascript' src='./橡皮擦图像擦除效果_files/jquery.eraser.js'></script>
+	<script type = "text/javascript">
+	addEventListener( "load", init, false );
+	function init( event ) {
+	//下面的代码实现当画布被擦除50%时触发事件showResetButton。
+	$('#redux').eraser( {
+		completeRatio: .5,
+		completeFunction: showResetButton
+	});
+}
+function reset(event) {
+	$("#redux").eraser('reset');
+	event.preventDefault();
+}
+function grow(event) {
+	$("#redux").eraser("size",150);		/* 橡皮擦大小 */
+	event.preventDefault();
+}
+
+//下面的代码实现当画布被擦除50%时触发事件showResetButton。
+$('#redux').eraser( {
+	completeRatio: .5,
+	completeFunction: showResetButton
+});
+
+function showResetButton(){
+	$("#resetBtn").css("display","inline-block");
+}
+</script>
+</head>
+
+<body>
+	<span class="container">
+		<img id="robot" src="./橡皮擦图像擦除效果_files/Tesla.jpg" />
+		<img id="redux" src="./橡皮擦图像擦除效果_files/Tesla2.jpg" />
+	</span>
+	<p>
+		<a href="#" id="resetBtn" onClick="reset(event);" style="display:none" class="box">重置</a>
+	</p>
+	<div style="text-align:center;margin:50px 0; font:normal 14px/24px 'MicroSoft YaHei';"></div>
+
+</body>
+</html>

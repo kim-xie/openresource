@@ -1,0 +1,220 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="Generator" content="EditPlus®">
+		<meta name="Author" content="king">
+		<meta name="Keywords" content="">
+		<meta name="Description" content="">
+		<title>支付宝注册页面</title>
+	</head>
+	<style type="text/css">
+		*{padding:0;margin:0;}
+		body{family:"微软雅黑";font-size:12px;}
+		a{text-decoration:none;}
+		ul,ol li{list-style:none;} 
+		@font-face {
+			font-family: "rei";
+			src: url("https://i.alipayobjects.com/common/fonts/rei.eot?20150616"); /* IE9 */
+			src: url("https://i.alipayobjects.com/common/fonts/rei.eot?20150616#iefix") format("embedded-opentype"), /* IE6-IE8 */
+			url("https://i.alipayobjects.com/common/fonts/rei.woff?20150616") format("woff"), /* chrome 6+、firefox 3.6+、Safari5.1+、Opera 11+ */
+			url("https://i.alipayobjects.com/common/fonts/rei.ttf?20150616")  format("truetype"), /* chrome、firefox、opera、Safari, Android, iOS 4.2+ */
+			url("https://i.alipayobjects.com/common/fonts/rei.svg?20150616#rei") format("svg"); /* iOS 4.1- */
+		}
+		.iconfont {
+			font-family:"rei";
+			font-style: normal;
+			font-weight: normal;
+			cursor: default;
+			-webkit-font-smoothing: antialiased;
+		}
+		.grid-780-pd {
+			padding-bottom: 30px;
+			padding-top: 30px;
+		}
+		
+		.grid-780 {
+			margin: 0 auto;
+			width: 778px;
+		}
+		
+		.fn-clear {
+			zoom: 1;
+		}
+		.fn-clear:after {
+			visibility: hidden;
+			display: block;
+			font-size: 0;
+			content: " ";
+			clear: both;
+			height: 0;
+		}
+		.navi-container {
+			padding-left: 40px;
+			padding-right: 40px;
+		}
+		
+		.ui-step {
+			padding: 0 40px;
+			margin: 0 auto;
+			font-size: 14px;
+			list-style: none;
+			zoom: 1;
+			position: relative;
+			color: #b7b7b7;
+			overflow: hidden;
+		}
+		.ui-step:after {
+			clear: both;
+			content: " ";
+			display: block;
+			font-size: 0;
+			height: 0;
+			visibility: hidden;
+		}
+
+		.ui-step li {
+			float: left;
+			height: 54px;
+			margin: 0;
+			width: 50%;
+			position: relative;
+		}
+		.ui-step-4 li {
+			width: 33%;
+		}
+		.ui-step .ui-step-active {
+			color: #f16f20;
+		}
+		.ui-step li .ui-step-line {
+			height: 3px;
+			background: #b9b9b9;
+			display: block;
+			margin-top: 14px;
+			line-height: 1;
+			overflow: hidden;
+		}
+		.ui-step li .ui-step-icon {
+			height: 50px;
+			position: absolute;
+			top: 0;
+			width: 150px;
+			text-align: center;
+			left: -25px;
+			font-family: tahoma;
+		}
+		.grid-780 .ui-step-icon .iconfont {
+			/* background-color: #F9F9F9; */
+		}
+		
+		.ui-step .ui-step-active .iconfont {
+			color: #ff7001;
+		}
+		
+		.ui-step-icon .iconfont {
+			font-size: 30px;
+			margin: 0;
+			color: #b7b7b7;
+			color: rgba(0,0,0,.25);
+			line-height: 30px;
+			background: #fff;
+			padding: 0 10px;
+			position: absolute;
+			top: 0;
+			left: 0;
+			text-shadow: 1px 1px 2px #fff,0 0 0 #ccc,1px 1px 2px #fff;
+		}
+		.iconfont {
+			font-family: "rei";
+			font-style: normal;
+			font-weight: normal;
+			cursor: default;
+			-webkit-font-smoothing: antialiased;
+		}
+		.ui-step-icon .ui-step-number {
+			line-height: 14px;
+			font-style: normal;
+			position: absolute;
+			top: 7px;
+			left: 0;
+			padding: 0 20px;
+			font-weight: 700;
+			color: #fff;
+		}
+		.ui-step-icon .ui-step-text {
+			height: 20px;
+			line-height: 20px;
+			position: relative;
+			text-shadow: 0 1px 0 #fff;
+			top: 34px;
+			left: -50px;
+		}
+		.ui-step li.ui-step-end {
+			position: absolute;
+			top: 0;
+			right: -110px;
+			width: 150px;
+			zoom: 1;
+			_clear: both;
+		}
+		.ui-step li.ui-step-end .ui-step-line {
+			display: none;
+		}
+		.grid-780 .ui-step-end .ui-step-icon .ui-step-number {
+			background: transparent;
+		}
+		.ui-step-end .ui-step-number {
+			background: transparent;
+			font-size: 12px;
+			font-style: normal;
+			left: 17px;
+			line-height: 12px;
+			padding: 0;
+			text-shadow: none;
+			top: 9px;
+		}
+	</style>
+	<body>
+		<div class="grid-780 grid-780-pd fn-hidden fn-clear">
+			<div class="navi-container">
+				<ol class="ui-step  ui-step-4 ">
+					<li class="ui-step-start ui-step-active">
+						<div class="ui-step-line">-</div>    
+						<div class="ui-step-icon">        
+							<i class="iconfont">y</i>
+							<i class="ui-step-number">1</i>
+							<span class="ui-step-text">创建账户</span>
+						</div>
+					</li>
+					
+					<li>
+						<div class="ui-step-line">-</div>    
+						<div class="ui-step-icon">        
+							<i class="iconfont">y</i>
+							<i class="ui-step-number">2</i>
+							<span class="ui-step-text">设置身份信息</span>
+						</div>
+					</li>		
+					
+					<li>
+						<div class="ui-step-line">-</div>    
+						<div class="ui-step-icon">        
+							<i class="iconfont">y</i>
+							<i class="ui-step-number">3</i>
+							<span class="ui-step-text">设置支付方式</span>
+						</div>
+					</li>			
+					
+					<li class="ui-step-end">
+						<div class="ui-step-line">-</div>    
+						<div class="ui-step-icon">        
+							<i class="iconfont">y</i>
+							<i class="iconfont ui-step-number"></i>
+							<span class="ui-step-text">成功</span>
+						</div>
+					</li>	
+				</ol>
+			</div>
+		</div>
+	</body>
+</html>

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+
+<html><head lang="en"><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+    <title></title>
+    <link rel="stylesheet" href="./jQuery点按钮一键分享代码_网页分享代码_files/share.css">
+<script src="./jQuery点按钮一键分享代码_网页分享代码_files/share.js"></script><link rel="stylesheet" href="./jQuery点按钮一键分享代码_网页分享代码_files/share_style1_32.css"></head>
+<body>
+<div class="mark"></div>
+<div class="share-dialog">
+    <div class="share-close"></div>
+    <div class="share-dialog-title">分享</div>
+    <div class="share-dialog-cont">
+        <div class="share-copy">
+            <div class="share-copy-l">分享链接：</div>
+            <div class="share-copy-c"><input id="copytext" type="text"></div>
+            <div id="btnCopy" class="share-copy-r" data-clipboard-target="copytext">复制链接</div>
+            <div class="clear"></div>
+        </div>
+        <div class="share-platform">
+            <div class="share-platform-l">社交平台：</div>
+            <div class="share-platform-r">
+                <div class="bdsharebuttonbox bdshare-button-style1-32" data-bd-bind="1465539431989">
+                    <a href="l#" class="bds_weixin" data-cmd="weixin" title="分享到微信"></a>
+                    <a href="l#" class="bds_tsina" data-cmd="tsina" title="分享到新浪微博"></a>
+                    <a href="l#" class="bds_sqq" data-cmd="sqq" title="分享到QQ好友"></a>
+                    <a href="l#" class="bds_qzone" data-cmd="qzone" title="分享到QQ空间"></a>
+                </div>
+                <div class="share-platform-text">
+                    您可以直接复制短链，分享给朋友，也可直接点击社交平台图标，指定分享。
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+	<script>window._bd_share_config={"common":{"bdSnsKey":{},"bdText":"分享到新浪微博","bdMini":"1","bdMiniList":["bdxc","tqf","douban","bdhome","sqq","thx","ibaidu","meilishuo","mogujie","diandian","huaban","duitang","hx","fx","youdao","sdo","qingbiji","people","xinhua","mail","isohu","yaolan","wealink","ty","iguba","fbook","twi","linkedin","h163","evernotecn","copy","print"],"bdPic":"","bdStyle":"1","bdSize":"32"},"share":{}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];
+	</script>
+
+    <script src="./jQuery点按钮一键分享代码_网页分享代码_files/jquery-1.11.1.min.js"></script>
+    <script src="./jQuery点按钮一键分享代码_网页分享代码_files/ZeroClipboard.js"></script>
+	<script>
+		var g_url = window.location.href;
+	    $('.share-copy-c input').val(g_url);
+		var clip = new ZeroClipboard( document.getElementById("btnCopy"));
+	</script><div id="global-zeroclipboard-html-bridge" class="global-zeroclipboard-container" data-clipboard-ready="true" style="position: absolute; left: 837px; top: 289.5px; width: 76px; height: 16px; z-index: 1000000000;">      <object classid="clsid:d27cdb6e-ae6d-11cf-96b8-444553540000" id="global-zeroclipboard-flash-bridge" width="100%" height="100%">         <param name="movie" value="ZeroClipboard.swf?nocache=1465539431736">         <param name="allowScriptAccess" value="sameDomain">         <param name="scale" value="exactfit">         <param name="loop" value="false">         <param name="menu" value="false">         <param name="quality" value="best">         <param name="bgcolor" value="#ffffff">         <param name="wmode" value="transparent">         <param name="flashvars" value="">         <embed src="ZeroClipboard.swf?nocache=1465539431736" loop="false" menu="false" quality="best" bgcolor="#ffffff" width="100%" height="100%" name="global-zeroclipboard-flash-bridge" allowscriptaccess="always" allowfullscreen="false" type="application/x-shockwave-flash" wmode="transparent" pluginspage="http://www.macromedia.com/go/getflashplayer" flashvars="" scale="exactfit">                </object></div>
+
+</body></html>

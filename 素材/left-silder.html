@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title></title>
+	</head>
+	<link rel="stylesheet" href="http://at.alicdn.com/t/font_1469363503_999007.css">
+	<link rel="stylesheet" href="css/common.css"/>
+	<script type="text/javascript" src="js/jquery-1.11.0.js"></script>
+	<style>
+		.top-nav{width:100%;height:60px;border-bottom:10px solid red;position:fixed;top:0;left:0;}
+		.top-nav .t-nav-left{width:500px;float:left;}
+		.top-nav .t-nav-right{float:right;background:red;height:100%;line-height:80px;}
+		.top-nav .t-nav-right .userinfo-nav a{color:#333;font-size:16px;font-weight:600;}
+		/* left nav  start*/
+		.left-nav{position:fixed;top:70px;left:0px;background:#424F63;width:240px;height:100%;overflow-y:auto;}
+		.parents .p-list{border-bottom:1px solid #333;line-height:46px;position:relative;}
+		.parents .p-list .ico-mark{position:absolute;right:20px;color:#fff;}
+		.parents .p-list a{color:#fff;font-size:18px;display:block;}
+		.parents .p-list .children .c_title{line-height:36px;background:#353f4f;display:none;text-indent:4em;}
+		.parents .p-list .children .c_title a{color:#fff;display:block;font-size:14px;}
+		.parents .p-list .children .c_title:hover a{color:#2DD888;background:#2A323F;}
+		.parents .p-list.on{background:#353f4f;}
+		.parents .p-list.on a,.parents .p-list.on .ico-mark{color:#65CEA7;}
+		.push_button{width:16px;height:16px;padding:16px;top:70px;cursor:pointer;position:fixed;-webkit-transform:translateX(240px);-ms-transform:translateX(240px);transform:translateX(240px);-webkit-transition:-webkit-transform .5s;transition:transform .5s;background-color:#353f4f;}
+		.push_button .navi-one{margin-top:6px;-webkit-transform:translate(0,-200%);-ms-transform:translate(0,-200%);transform:translate(0,-200%);-webkit-transition:-webkit-transform .3s .3s;transition:transform .3s .3s;}
+		.push_button li{width:100%;height:2px;background:#FFF;margin:0 auto;border-radius:2px;}
+		.push_button .navi-two{transition:opacity .2s .3s,width .2s .3s;-webkit-transition:opacity .2s .3s,width .2s .3s;-moz-transition:opacity .2s .3s,width .2s .3s;-ms-transition:opacity .2s .3s,width .2s .3s;}
+		.push_button .navi-three{transition:transform .3s .3s;-webkit-transition:-webkit-transform .3s .3s;-ms-transition:transform .3s .3s;-moz-transition:transform .3s .3s;transform:translate(0,200%);-moz-transform:translate(0,200%);-webkit-transform:translate(0,200%);-ms-transform:translate(0,200%);}
+		.push_button.active{-webkit-transform:translateX(-240px);-ms-transform:translateX(-240px);transform:translateX(-240px);} 
+		.navi-one.active{transform:translateY(2px) rotate(45deg);-moz-transform:translateY(2px) rotate(45deg);-webkit-transform:translateY(2px) rotate(45deg);-ms-transform:translateY(2px) rotate(45deg);}
+		.navi-two.active{width:0;opacity:0;}
+		.navi-three.active{transform:translateY(-2px) rotate(-45deg);-moz-transform:translateY(-2px) rotate(-45deg);-webkit-transform:translateY(-2px) rotate(-45deg);-ms-transform:translateY(-2px) rotate(-45deg);}
+		/* left nav end */
+		
+		
+	</style>
+	<body>
+		<!--top nav start-->
+		<div class="top-nav">
+			<div class="t-nav-left ml5">
+				<a href="index.html"><img src="img/home-logo.png" alt="logo"/></a>
+			</div>
+			<div class="t-nav-right mr5">
+				<ul class="userinfo-nav">
+					<li><a href="javascript:void(0)">欢迎<span class="usernam">king</span>进入广发后台！</a></li>
+				</ul>
+			</div>
+		</div>
+		<!--top nav end-->	
+			
+		<!-- left-nav start -->
+		<div class="left-nav">
+			<!--logo and iconic logo start-->
+	        <!--<div class="logo">
+	            <a href="javascript:void(0);"><img src="img/logo.jpg" alt="logo"></a>
+	        </div>-->
+	        <!--logo and iconic logo end-->
+			<ul class="parents">
+				
+				<li class="p-list on">
+					<a href="javascript:void(0);"><i class="iconfont icon-home fl mr10 fz18 ml20"></i>欢迎主页</a>
+				</li>
+				
+				<li class="p-list p_title">
+					<i class="iconfont icon-add ico-mark"></i> 
+					<a href="javascript:void(0);"><i class="iconfont icon-xitongguanli fl mr3 fz18 ml13"></i>系统管理</a>
+					<ul class="children">
+						<li class="c_title"><a href="javascript:void(0);" target="_blank">用户管理</a></li>
+						<li class="c_title"><a href="javascript:void(0);" target="_blank">组织机构管理</a></li>
+						<li class="c_title"><a href="javascript:void(0);" target="_blank">用户组管理</a></li>
+						<li class="c_title"><a href="javascript:void(0);" target="_blank">角色管理</a></li>
+						<li class="c_title"><a href="javascript:void(0);" target="_blank">属性定义管理</a></li>
+						<li class="c_title"><a href="javascript:void(0);" target="_blank">事件定义管理</a></li>
+						<li class="c_title"><a href="javascript:void(0);" target="_blank">过程定义管理</a></li>
+						<li class="c_title"><a href="javascript:void(0);" target="_blank">系统日志管理</a></li>
+					</ul>
+				</li>
+				
+				<li class="p-list p_title">
+					<i class="iconfont icon-add ico-mark"></i> 
+					<a href="javascript:void(0);"><i class="iconfont icon-yewubusiness165 fl mr10 fz18 ml20"></i>业务管理</a>
+					<ul class="children">
+						<li class="c_title"><a href="javascript:void(0);" target="_blank">目标账号管理</a></li>
+						<li class="c_title"><a href="javascript:void(0);" target="_blank">目标组织机构管理</a></li>
+						<li class="c_title"><a href="javascript:void(0);" target="_blank">目标系统管理</a></li>
+						<li class="c_title"><a href="javascript:void(0);" target="_blank">目标组织机构管理</a></li>
+					</ul>
+				</li>
+				
+				<li class="p-list p_title">
+					<i class="iconfont icon-add ico-mark"></i> 
+					<a href="javascript:void(0);"><i class="iconfont icon-chart fl mr10 fz18 ml20"></i>报表统计</a>
+					<ul class="children">
+						<li class="c_title"><a href="javascript:void(0);" target="_blank">查询类报表</a></li>
+						<li class="c_title"><a href="javascript:void(0);" target="_blank">统计类报表</a></li>
+					</ul>
+				</li>
+				
+				<li class="p-list p_title">
+					<i class="iconfont icon-add ico-mark"></i> 
+					<a href="javascript:void(0);"><i class="iconfont icon-admin fl mr10 fz18 ml20"></i>用户管理</a>
+					<ul class="children">
+						<li class="c_title"><a href="javascript:void(0);" target="_blank">目标账号管理</a></li>
+						<li class="c_title"><a href="javascript:void(0);" target="_blank">目标组织机构管理</a></li>
+						<li class="c_title"><a href="javascript:void(0);" target="_blank">目标系统管理</a></li>
+						<li class="c_title"><a href="javascript:void(0);" target="_blank">目标组织机构管理</a></li>
+					</ul>
+				</li>
+				
+				<li class="p-list p_title">
+					<i class="iconfont icon-add ico-mark"></i> 
+					<a href="javascript:void(0);"><i class="iconfont icon-table fl mr10 fz18 ml20"></i>权限管理</a>
+					<ul class="children">
+						<li class="c_title"><a href="javascript:void(0);" target="_blank">查询类报表</a></li>
+						<li class="c_title"><a href="javascript:void(0);" target="_blank">统计类报表</a></li>
+					</ul>
+				</li>
+				
+				<li class="p-list p_title">
+					<i class="iconfont icon-add ico-mark"></i> 
+					<a href="javascript:void(0);"><i class="iconfont icon-gongzuoliuzhuanhuan fl mr10 fz18 ml20"></i>工作流管理</a>
+					<ul class="children">
+						<li class="c_title"><a href="javascript:void(0);" target="_blank">简介</a></li>
+						<li class="c_title"><a href="javascript:void(0);" target="_blank">操作符</a></li>
+						<li class="c_title"><a href="javascript:void(0);" target="_blank">数据类型</a></li>
+						<li class="c_title"><a href="javascript:void(0);" target="_blank">面向对象</a></li>
+						<li class="c_title"><a href="javascript:void(0);" target="_blank">集合</a></li>
+						<li class="c_title"><a href="javascript:void(0);" target="_blank">异常处理</a></li>
+						<li class="c_title"><a href="javascript:void(0);" target="_blank">IO文件流</a></li>
+					</ul>
+				</li>
+				
+				<li class="p-list">
+					<a href="login.html"><i class="iconfont icon-loginout fl mr10 fz20 ml20"></i>退出</a>
+				</li>
+				
+			</ul>
+		</div>
+		<!-- button start -->
+		<ul class="push_button button">
+			<li class="navi-one"></li>
+			<li class="navi-two"></li>
+			<li class="navi-three"></li>
+		</ul>
+		<!-- button end -->
+		<!-- overlay -->
+		<div class="overlay"></div>
+		<!-- left-nav end -->
+		
+		<!--main start-->
+		<div class="main">
+			<!--location-->
+			<div class="location-nav">
+				<i class="iconfont icon-loginout fl mr10 fz20 ml20"></i>当前位置》欢迎主页
+			</div>
+		</div>
+		<!--main end-->
+		
+		<script>
+		
+			$(function(){
+				$(".push_button").children().addClass("active");
+			});
+			
+			var leftNav = 0;
+			$(".push_button").on("click", function() {
+				$(this).toggleClass("active");
+				$(this).children().toggleClass("active");
+				leftNav = parseInt($(".left-nav").css("left"));
+				if (leftNav == 0) {
+					$(".left-nav").animate({"left" : "-240px"}, 300);
+				} else {
+					$(".left-nav").animate({"left" : 0}, 300);
+				}
+				
+				var bodyLeft = parseInt($("body").css("margin-left"));
+				if (bodyLeft == 0) {
+					$("body").animate({"margin-left" : "240px"}, 300);
+				} else {
+					$("body").animate({"margin-left" : 0}, 300);
+				}
+				
+			});
+			
+			/* 左边导航列表 */
+			$(".p-list").click(function() {
+				$(this).addClass("on").siblings().removeClass("on");
+				$(this).find("i.ico-mark").toggleClass("icon-jian icon-add");
+				$(this).find(".c_title").slideToggle();
+				$(this).siblings().find(".c_title").slideUp().end().find("i.ico-mark").removeClass("icon-jian").addClass("icon-add");
+			});
+			
+		</script>
+	</body>
+</html>
