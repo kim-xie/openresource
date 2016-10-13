@@ -1,0 +1,25 @@
+@charset "utf-8";
+.cd{color:#ddd;}
+.cb{color:#0076e3;}
+.c3{color:#333;}
+.c9{color:#999;}
+.none{display:none;}
+.block{display:block;}
+#searchBox{position:relative;background:#fff;}
+#searchBox #search_box{display:inline-block;position:relative;width:100%;height:100%;}
+#searchBox #search_box.focus{box-shadow: 0px 0px 4px #0076e3;border-color:#0076e3;}
+#searchBox #search_box.focus .searchIcon{color:#0076e3;}
+#searchBox #search_box.focus .inputclear{color:#0076e3;}
+#searchBox #search_box.focus .search_button{background:#0076e3;color:#fff;}
+#searchBox #search_box span{display:inline-block;height:100%;}
+#searchBox #search_box .search_icon{float:left;/* width:8%; */text-align:center;}
+#searchBox #search_box .search_main{float:left;/* width:80%; */text-align:center;overflow:hidden;}
+#searchBox #search_box .search_main .search_me{float:left;}
+#searchBox #search_box .search_main .search_in{float:left;height:100%;width:93%;border:none;text-indent:0.2em;outline:none;}
+#searchBox #search_box .search_button{position:relative;float:right;/* width:12%; */cursor:pointer;text-align:center;font-weight:600;background:#ddd;color:#333;}
+#searchBox #search_box .search_button .rightArrow{position:absolute;color:#fff;left:-1px;}
+#searchBox #search_box .inputclear{position:absolute;right:13%;z-index:3;cursor:pointer;}
+#searchBox #search_box .inputclear.none{display:none;}
+#searchBox #search_box .inputclear.block{display:block;}
+#searchBox #search_list{width:100%;position:absolute;z-index:100;}
+#searchBox #search_list li a{display:inline-block;width:100%;padding:8px 0;text-indent:0.5em;}

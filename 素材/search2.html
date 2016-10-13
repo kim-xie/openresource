@@ -1,0 +1,71 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="Generator" content="EditPlus®">
+		<meta name="Author" content="king">
+		<meta name="Keywords" content="">
+		<meta name="Description" content="">
+		<title>搜索插件</title>
+	</head>
+	<style type="text/css">
+		*{padding:0;margin:0;}
+		body{family:"微软雅黑";font-size:12px;overflow:hidden;}
+		a{text-decoration:none;}
+		ul,ol li{list-style:none;} 
+		.wrap{width:400px;height:32px;margin:100px auto;}
+		
+	</style>
+	<link rel="stylesheet" href="font-awesome/css/font-awesome.css" />
+	<link rel="stylesheet" href="search/search.css"/>
+	<body>
+		<div class="wrap">
+			<div id="searchBox"></div>
+		</div>
+		<script src="js/jquery-3.0.0.min.js"></script>
+		<script src="search/search.js"></script>
+		<script>
+			
+			$(function(){
+				//初始化搜索框
+				$("#searchBox").mySearch({
+					searchText: "搜 索",//搜索提示
+					maxlength: "50",//允许输入的最长个数
+					placeholder: "",//提示内容IE8不支持
+					placeholder1: "请输入搜索关键字...",//提示内容所有浏览器都通用
+					width: "100%",//搜索框的宽度
+					height: "100%",//搜索框的高度
+					iconWidth: "8%",
+					searchButtonWidth: "12%",
+					hideArrow: true,//是否显示搜索三角形
+					searchFontSize: 14,//搜索字体
+					searchIcon: "fa-search",//搜索框的搜索图标
+					searchIconFS: 18,//搜索框的搜索图标的大小
+					searchBoxborder: "2px solid #ddd",//下拉列表对象的边框
+					searchBoxborderWidth: 2,//下拉列表对象的边框
+					searchFocusCl: "#0076e3",//搜索框获取焦点的颜色
+					tipColor: "blue",
+					listContent: ["1111111","222222","3333333333"],//下拉列表的内容
+					listFontSize: 14,//列表字体
+					listborder: "2px solid #ccc",//下拉列表对象的边框
+					listBackground: "#ccc",//下拉列表对象的背景颜色
+					listcolor: "#333",//下拉列表对象的颜色
+					listhoverbg: "#0076e3",//下拉列表鼠标移入对象的背景颜色
+					listhovercl: "#fff",//下拉列表鼠标移入对象的颜色
+					allowEnter: true,//允许使用回车键触发搜索
+					onclick: function($obj,medata,indata){
+						alert(medata + indata);
+						
+					}
+				});
+				
+			});
+
+			
+			
+			
+			
+
+		</script>
+	</body>
+</html>

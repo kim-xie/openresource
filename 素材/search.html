@@ -1,0 +1,153 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="Generator" content="EditPlus®">
+		<meta name="Author" content="king">
+		<meta name="Keywords" content="">
+		<meta name="Description" content="">
+		<title>Document</title>
+	</head>
+	<style type="text/css">
+		*{padding:0;margin:0;}
+		body{family:"微软雅黑";font-size:12px;overflow:hidden;}
+		a{text-decoration:none;}
+		
+		ul,ol li{list-style:none;} 
+		.cd{color:#ddd;}
+		.cb{color:#0076e3;}
+		.none{display:none;}
+		.block{display:block;}
+		#searchBox{position:relative;width:500px;height:32px;margin:100px auto;}
+		#searchBox #search_box{display:inline-block;position:relative;width:100%;height:100%;border:1px solid #0076e3;}
+		#searchBox #search_box.focus{box-shadow: 0px 0px 4px #0076e3;}
+		#searchBox #search_box.focus .searchIcon{color:#0076e3;}
+		#searchBox #search_box.focus .inputclear{color:#0076e3;}
+		#searchBox #search_box span{display:inline-block;height:100%;line-height:32px;}
+		#searchBox #search_box .search_icon{float:left;width:8%;text-align:center;}
+		#searchBox #search_box .search_icon .searchIcon{line-height:29px;}
+		#searchBox #search_box .search_main{float:left;width:80%;text-align:center;}
+		#searchBox #search_box .search_main .search_me{float:left;}
+		#searchBox #search_box .search_main .search_in{float:left;height:100%;width:100%;border:none;text-indent:0.2em;outline:none;}
+		#searchBox #search_box .search_button{position:relative;float:right;width:12%;background:#0076e3;color:#fff;cursor:pointer;text-align:center;}
+		#searchBox #search_box .search_button .rightArrow{position:absolute;color:#fff;left:-1px;margin-top:6px;font-size:20px;}
+		#searchBox #search_box .inputclear{position:absolute;right:13%;top:7px;z-index:3;font-size:18px;cursor:pointer;}
+		#searchBox #search_box .inputclear.none{display:none;}
+		#searchBox #search_box .inputclear.block{display:block;}
+
+		#searchBox #search_list{background:#ccc;width:100%;border:1px solid #ccc;}
+		#searchBox #search_list li a{display:inline-block;width:100%;padding:8px 0;}
+		#searchBox #search_list li a:hover{background:#0076e3;color:#fff;}
+	</style>
+	<link rel="stylesheet" href="font-awesome/css/font-awesome.css" />
+	<body>
+
+		<div id="searchBox">
+		 	<span id="search_box">
+				<span class="search_icon"><i class="fa fa-search searchIcon fa-2x cd"></i></span>
+				<span class="search_main">
+					<span id="search_me" class="search_me none"></span>
+					<input type="text" id="search_in" class="search_in" maxlength="50"/>
+				</span>
+				<i class="fa fa-times-circle inputclear cd none"></i>
+				<span class="search_button" onclick="search(this)"><i class="fa fa-caret-right rightArrow"></i>搜&nbsp;索</span>
+			</span>
+			<ul id="search_list" class="none">
+				<li><a href="#">11111111</a></li>
+				<li><a href="#">222222</a></li>
+				<li><a href="#">3333333333</a></li>
+			</ul> 
+		</div>
+
+		<script src="js/jquery-3.0.0.min.js"></script>
+		<script>
+			(function($){
+
+				//获取框的宽度
+				var search_meWidth;
+				var search_inWidth = $("#search_in").width();
+				
+				//选中下拉选择框
+				$("#search_list").find("a").click(function(){
+					var text = $(this).text().trim();
+					$("#search_me").text(text+":").show();
+					search_meWidth = $("#search_me").width();
+					$("#search_in").width(search_inWidth - search_meWidth).focus();
+					$(this).parents("#search_list").siblings().find(".inputclear").show();
+					$(this).parents("#search_list").hide();
+				});
+
+				//点击重置按钮
+				$(".inputclear").click(function(){
+					$(this).parent().find("#search_me").text("").hide();
+					$(this).parent().find("#search_in").val("");
+					$("#search_in").width(search_inWidth + search_meWidth);
+					$(this).hide();
+				});
+
+				//触发下拉框的伸缩事件
+				$("input").click(function(e){
+					stopPropagation(e);
+					$(this).parents("#searchBox").find("#search_list").toggle();
+				});
+
+				//隐藏下拉框
+				$("html").click(function(){
+					$("#searchBox").find("#search_list").hide();
+				});
+
+				//输入框获取焦点事件
+				$("input").focus(function(){
+					var $this = $(this);
+					showerror($this);
+					$this.parents("#search_box").addClass("focus");
+				});
+				//输入框失去焦点事件
+				$("input").blur(function(){
+					var $this = $(this);
+					showerror($this);
+					$this.parents("#search_box").removeClass("focus");
+				});
+				//是否显示情况按钮
+				function showerror(obj){
+					var input = obj.val().trim();
+					if(isNotEmpty(input)){
+						obj.parents("#search_box").find(".inputclear").show();
+					}
+				}
+				//空判断
+				function isEmpty(val) {
+					val = $.trim(val);
+					if (val == null)
+						return true;
+					if (val == undefined || val == 'undefined')
+						return true;
+					if (val == "")
+						return true;
+					if (val.length == 0)
+						return true;
+					if (!/[^(^\s*)|(\s*$)]/.test(val))
+						return true;
+					return false;
+				}
+				//非空判断
+				function isNotEmpty(val) {
+					return !isEmpty(val);
+				}
+				//阻止事件冒泡
+				function stopPropagation(e) {
+					// 如果提供了事件对象，则这是一个非IE浏览器
+					if (e && e.stopPropagation){
+						// 因此它支持W3C的stopPropagation()方法
+						e.stopPropagation();
+					}else{
+						// 否则，我们需要使用IE的方式来取消事件冒泡
+						window.event.cancelBubble = true;
+					}
+				};
+			})(jQuery);
+			
+
+		</script>
+	</body>
+</html>

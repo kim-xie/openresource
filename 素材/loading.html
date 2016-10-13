@@ -1,0 +1,35 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="Generator" content="EditPlus®">
+		<meta name="Author" content="king">
+		<meta name="Keywords" content="">
+		<meta name="Description" content="">
+		<title>Document</title>
+	</head>
+	<style type="text/css">
+		*{padding:0;margin:0;}
+		body{family:"微软雅黑";font-size:12px;}
+		a{text-decoration:none;}
+		ul,ol li{list-style:none;} 
+		#tbody{width:300px;height:200px;border:1px solid red;margin:100px auto;}
+	</style>
+	<script src="js/jquery-3.0.0.min.js"></script>
+	<script src="loading.js"></script>
+	<body>
+		<div id="tbody">
+			<div id="loading"></div>
+		</div>
+	  <script>
+			function loading2(target,mark){
+				$.loading({target:$(target),mark:1}); 
+			};
+			$(function(){
+				//loading2($("#loading"),1);
+				loading2($("#tbody"),5);
+			});
+			
+	  </script>
+	</body>
+</html>
