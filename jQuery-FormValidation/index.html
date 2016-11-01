@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>表单验证插件</title>
+	<script type="text/javascript" src="jquery-1.8.0.min.js"></script>
+	<script type="text/javascript" src="from.js"></script> 
+	<style type="text/css">
+		#mayform li{
+			margin-bottom: 10px;
+		}
+	</style>
+</head>
+<body>
+<form id="mayform" method="post" action="success.html">
+	<ul>
+		<li>姓名：<input type="text" name="user" check="required chinese"/></li>
+		<li>密码：<input type="password" check="required pw1"/></li>
+		<li>确认密码：<input type="password" check="required pw2"/></li>
+		<li>邮箱：<input type="text" name="email" check="required email"/></li>
+		<li>手机：<input type="text" name="phone" check="required phone"/></li>
+
+	</ul>
+	<input type="submit" value="提交" />
+</form>
+</body>
+<script type="text/javascript">
+	$(function(){
+		$("#mayform").checkForm();
+
+	})
+</script>
+</html>
