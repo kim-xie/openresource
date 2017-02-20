@@ -1,0 +1,60 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>jQuery旋转木马自动切换代码 - 站长素材</title>
+<link type="text/css" rel="stylesheet" href="carousel.css">
+<script src="http://code.jquery.com/jquery-1.12.0.min.js"></script>
+<script type="text/javascript" src="carousel.js"></script>
+<style>
+body { background-color:#222; color:#fff;font-family:"microsoft yahei";}
+.container { margin:150px auto; max-width:1000px;}
+h1 { margin-bottom:30px; text-align:center;font-size:30px;}
+.pictureSlider{position:relative;}
+.pointer{position:absolute;bottom:-30px;left:0;width:1000px;height:30px;margin:0 auto;}
+.pointer-list{width:150px;height:30px;margin:0 auto;}
+/* .pointer-list .pointer-item a{display:block;width:20px;height:20px;float:left;border-radius:50%;background:#fff;margin:5px;} */
+.pointer-list .pointer-item a{display:block;width:20px;height:8px;float:left;background:#fff;margin:11px 5px;}
+.pointer-list .pointer-item.active a{background:#8E8C8C;}
+</style>
+</head>
+<body>
+	<div class="container">
+		<div class="pictureSlider poster-main" data-setting='{"width":1000,"height":270,"posterWidth":640,"posterHeight":270,"scale":0.9,"autoPlay":true,"delay":2000,"speed":300}'>
+			<div class="poster-btn poster-prev-btn"></div>
+			<ul class="poster-list">
+				<li class="poster-item"><a href="#"><img src="https://unsplash.it/640/270?image=1014" width="100%" height="100%"></a></li>
+				<li class="poster-item"><a href="#"><img src="https://unsplash.it/640/270?image=1013" width="100%" height="100%"></a></li>
+				<li class="poster-item"><a href="#"><img src="https://unsplash.it/640/270?image=1012" width="100%" height="100%"></a></li>
+				<li class="poster-item"><a href="#"><img src="https://unsplash.it/640/270?image=1011" width="100%" height="100%"></a></li>
+				<li class="poster-item"><a href="#"><img src="https://unsplash.it/640/270?image=1010" width="100%" height="100%"></a></li>
+				<!-- <li class="poster-item"><a href="#"><img src="https://unsplash.it/640/270?image=1009" width="100%" height="100%"></a></li>
+				<li class="poster-item"><a href="#"><img src="https://unsplash.it/640/270?image=1008" width="100%" height="100%"></a></li>
+				<li class="poster-item"><a href="#"><img src="https://unsplash.it/640/270?image=1009" width="100%" height="100%"></a></li>
+				<li class="poster-item"><a href="#"><img src="https://unsplash.it/640/270?image=1006" width="100%" height="100%"></a></li> -->
+			</ul>
+			<div class="poster-btn poster-next-btn"></div>
+			<div class="pointer">
+				<ul class="pointer-list">
+					<li class="pointer-item active"><a href="#"></a></li>
+					<li class="pointer-item"><a href="#"></a></li>
+					<li class="pointer-item"><a href="#"></a></li>
+					<li class="pointer-item"><a href="#"></a></li>
+					<li class="pointer-item"><a href="#"></a></li>
+					<!-- <li class="pointer-item"><a href="#"></a></li>
+					<li class="pointer-item"><a href="#"></a></li>
+					<li class="pointer-item"><a href="#"></a></li>
+					<li class="pointer-item"><a href="#"></a></li> -->
+				</ul>
+			</div>
+		</div>
+	</div>
+	<script>
+		$(function(){
+			Carousel.init($(".pictureSlider"));
+		});
+	</script>
+</body>
+</html>
