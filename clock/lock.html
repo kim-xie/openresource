@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <style>
+    /** 重置表格元素 **/
+    table{border-collapse:collapse;border-spacing:0;}
+    ol,ul{list-style:none;}
+    address,caption,cite,code,dfn,em,strong,th,var{font-weight:normal;font-style:normal;}
+    caption,th{text-align:left;}
+    em,i,small,caption,th{font-weight:normal;font-style:normal;font-size:100%;}
+    h1,h2,h3,h4,h5,h6,em{font-weight:normal;}
+    q:before,q:after{content:'';}
+    .clearfix{*zoom:1;}
+    .clearfix:after{content:".";display:block;clear:both;visibility:hidden;line-height:0;height:0;}
+    a{color:#65686b;text-decoration:none;}
+    a.td{text-decoration: underline;}
+    img{border:0;vertical-align:middle;max-width:100%;}
+    a,button{outline:none;border:0;}
+    input,select{border:1px solid #ccc;font-family:inherit;}
+    button::-moz-focus-inner{border:0;padding:0;margin:0;}
+    textarea,input,button,select{outline:0;font-size:inherit;line-height:inherit;color:inherit;font-family:inherit;outline:none;}
+    textarea{overflow:auto;resize:none;font-family:inherit;}
+    ::selection{background:rgba(56, 137, 194,0.8);color:#FFF}
+    ::-moz-selection{background:rgba(56, 137, 194,0.8);color:#FFF}
+    input::selection,textarea::selection,.btn-positive::selection{background:#39f;color:#FFF}
+    input::-moz-selection,textarea::-moz-selection,.btn-positive::-moz-selection{background:#39f;color:#FFF}
+
+    #clockbox{padding:0;text-align:center;}
+    #clockbox:after{content:"";display:block;position:absolute;top:0;left:0;z-index:2;right:0;bottom:0;}
+    #clockbox p{position:absolute;top:112px;left:68px;z-index:2}
+    #clockbox .clock{border-radius:50%;}
+    #clockbox .hclock{position:relative;display:inline-block;}
+    #clockbox .hms{position:absolute;top:0;left:0;display:block;left:50px;top:50px;transform-origin:center center}
+    .ke_clockbox{width:200px;position:fixed;bottom:10px;z-index:80;right:60px;border:1px solid #EDFFF6;border-radius:50%;height:200px;box-shadow:0 0 1em #C1B3B3;}
+    #clocktime{position:absolute;top:50%;left:50%;z-index:2;width:100%;height:100%;margin-top:-35px;margin-left:-32px;color:#999}
+
+  </style>
+</head>
+<body data-iscommpent="1">
+  <!-- <div id="ke_clockbox" class="ke_drag ke_clockbox" >
+    <span class="clock_overy"></span>
+    <div id="clockbox">
+      <div class="clock">
+        <div class="hclock">
+          <span class="hms">
+            <img onerror="" class="hour" draggable="false" src="./resources/img/clock_hour.png" style="transform: rotate(540deg);">
+          </span>
+          <span class="hms">
+            <img onerror="" class="minute" draggable="false" src="./resources/img/clock_min.png" style="transform: rotate(192deg);">
+          </span>
+          <span class="hms">
+            <img onerror="" class="second" draggable="false" src="./resources/img/clock_sec.png" style="transform: rotate(168deg);">
+          </span>
+          <img draggable="false" onerror="" src="./resources/img/clock.png">
+        </div>
+      </div>
+    </div>
+  </div> -->
+  <script src="./resources/js/jquery-3.0.0.min.js"></script>
+  <script src="./resources/js/compoment.js"></script>
+</body>
+</html>
